@@ -1,23 +1,24 @@
 import React from 'react';
-import './App.scss';
+
+import { SWRConfig } from 'swr';
+
+import HomePage from './views/index';
+
+const CACHE_TIME = 24 * 60 * 60 * 1000;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SWRConfig
+      value={{
+        fetcher: (...args) => fetch(...args).then((result) => result.json()),
+        dedupingInterval: CACHE_TIME,
+        revalidateOnFocus: false,
+      }}
+    >
+      <div className="App">
+        <HomePage />
+      </div>
+    </SWRConfig>
   );
 }
 
