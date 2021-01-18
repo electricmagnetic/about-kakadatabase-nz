@@ -13,7 +13,6 @@ const Statistic = ({ valueKey, label, endpoint }) => {
   else if (error) return <Error />;
   else if (data) {
     const value = data[valueKey];
-    console.log(value);
 
     return (
       <figure className="Statistic">
