@@ -1,8 +1,8 @@
 {
-  "name": "kakadatabase-nz",
+  "name": "about-kakadatabase-nz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kakadatabase.nz",
+  "homepage": "https://about.kakadatabase.nz",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@testing-library/jest-dom": "^5.11.9",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "s3-deploy './build/**' --cwd './build/' --region ap-southeast-2 --delete-removed --distId E29NCG9XEPPHTO --invalidate '/index.html' --bucket kakadatabase.nz",
+    "deploy": "s3-deploy './build/**' --cwd './build/' --region ap-southeast-2 --delete-removed --distId E29NCG9XEPPHTO --invalidate '/index.html' --bucket about.kakadatabase.nz",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

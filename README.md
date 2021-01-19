@@ -1,4 +1,4 @@
-# kakadatabase-nz
+# about-kakadatabase-nz
 
 A simple explanatory website for the Kākā Database project.
 
