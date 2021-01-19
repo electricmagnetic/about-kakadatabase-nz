@@ -23,17 +23,11 @@ const Statistic = ({ valueKey, label, endpoint }) => {
   } else return null;
 };
 
-const statistics = [
-  { label: 'banded birds', valueKey: 'length', endpoint: '/birds/' },
-  { label: 'observations recorded', valueKey: 'count', endpoint: '/observations/' },
-  { label: 'birds observed', valueKey: 'count', endpoint: '/bird_observations/' },
-];
-
-const Statistics = () => (
-  <div className="Statistics">
+const Statistics = ({ statistics, className }) => (
+  <div className={['Statistics', className].join(' ')}>
     <div className="row">
       {statistics.map((statistic) => (
-        <div className="col-md-2" key={statistic.endpoint}>
+        <div className="col-md" key={statistic.endpoint}>
           <Statistic {...statistic} />
         </div>
       ))}
